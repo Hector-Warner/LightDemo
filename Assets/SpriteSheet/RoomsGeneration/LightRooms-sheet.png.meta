@@ -1,0 +1,676 @@
+fileFormatVersion: 2
+guid: 2b996adbc7defab4ab43488520a67189
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -802345755649057952
+    second: LightRooms-sheet_0
+  - first:
+      213: 7674252467519297859
+    second: LightRooms-sheet_1
+  - first:
+      213: 6364774152627805097
+    second: LightRooms-sheet_2
+  - first:
+      213: -4598588417334689351
+    second: LightRooms-sheet_3
+  - first:
+      213: 1654759600996955220
+    second: LightRooms-sheet_4
+  - first:
+      213: 3178882360983106143
+    second: LightRooms-sheet_5
+  - first:
+      213: -7375862743630670853
+    second: LightRooms-sheet_6
+  - first:
+      213: -8272379069151033055
+    second: LightRooms-sheet_7
+  - first:
+      213: 6654968837021434919
+    second: LightRooms-sheet_8
+  - first:
+      213: -3120945075748466394
+    second: LightRooms-sheet_9
+  - first:
+      213: -5920866253262977076
+    second: LightRooms-sheet_10
+  - first:
+      213: 1488394107988024505
+    second: LightRooms-sheet_11
+  - first:
+      213: 6283585068323565022
+    second: LightRooms-sheet_12
+  - first:
+      213: 1831353255072023294
+    second: LightRooms-sheet_13
+  - first:
+      213: -9041198338258954903
+    second: LightRooms-sheet_14
+  - first:
+      213: -8770086683923927166
+    second: LightRooms-sheet_15
+  - first:
+      213: 6193365323260484015
+    second: LightRooms-sheet_16
+  - first:
+      213: 261152999002271958
+    second: LightRooms-sheet_17
+  - first:
+      213: -8021561162795069821
+    second: LightRooms-sheet_18
+  - first:
+      213: 7127407649113019771
+    second: LightRooms-sheet_19
+  - first:
+      213: 8925788617062988602
+    second: LightRooms-sheet_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LightRooms-sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06bde7749ce7dd4f0800000000000000
+      internalID: -802345755649057952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightRooms-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 349172395fb608a60800000000000000
+      internalID: 7674252467519297859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightRooms-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 10
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9abd7faae58345850800000000000000
+      internalID: 6364774152627805097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightRooms-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b14a84e2388e20c0800000000000000
+      internalID: -4598588417334689351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightRooms-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 10
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 454371ef613e6f610800000000000000
+      internalID: 1654759600996955220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightRooms-sheet_5
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 0
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5237253aa8ad1c20800000000000000
+      internalID: 3178882360983106143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightRooms-sheet_6
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 3
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf31bd5e9eba3a990800000000000000
+      internalID: -7375862743630670853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightRooms-sheet_7
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 10
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12940e7c01b923d80800000000000000
+      internalID: -8272379069151033055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightRooms-sheet_8
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72405f1d5e23b5c50800000000000000
+      internalID: 6654968837021434919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightRooms-sheet_9
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 10
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62112843dfc20b4d0800000000000000
+      internalID: -3120945075748466394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightRooms-sheet_10
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 0
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc789a3438bd4dda0800000000000000
+      internalID: -5920866253262977076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightRooms-sheet_11
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 3
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bc196c2e86d7a410800000000000000
+      internalID: 1488394107988024505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightRooms-sheet_12
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 10
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eddef59e357c33750800000000000000
+      internalID: 6283585068323565022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightRooms-sheet_13
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 0
+        width: 26
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef2c2d225164a6910800000000000000
+      internalID: 1831353255072023294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightRooms-sheet_14
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 10
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96519308306378280800000000000000
+      internalID: -9041198338258954903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightRooms-sheet_15
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 0
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28fa45b70a46a4680800000000000000
+      internalID: -8770086683923927166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightRooms-sheet_16
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 0
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa9d92992f043f550800000000000000
+      internalID: 6193365323260484015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightRooms-sheet_17
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 11
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d0fe89d44dcf9300800000000000000
+      internalID: 261152999002271958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightRooms-sheet_18
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 0
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38ec78b5f90bda090800000000000000
+      internalID: -8021561162795069821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightRooms-sheet_19
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 0
+        width: 70
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7598c68e73a9e260800000000000000
+      internalID: 7127407649113019771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightRooms-sheet_20
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 2
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3bb344d475cedb70800000000000000
+      internalID: 8925788617062988602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      LightRooms-sheet_0: -802345755649057952
+      LightRooms-sheet_1: 7674252467519297859
+      LightRooms-sheet_10: -5920866253262977076
+      LightRooms-sheet_11: 1488394107988024505
+      LightRooms-sheet_12: 6283585068323565022
+      LightRooms-sheet_13: 1831353255072023294
+      LightRooms-sheet_14: -9041198338258954903
+      LightRooms-sheet_15: -8770086683923927166
+      LightRooms-sheet_16: 6193365323260484015
+      LightRooms-sheet_17: 261152999002271958
+      LightRooms-sheet_18: -8021561162795069821
+      LightRooms-sheet_19: 7127407649113019771
+      LightRooms-sheet_2: 6364774152627805097
+      LightRooms-sheet_20: 8925788617062988602
+      LightRooms-sheet_3: -4598588417334689351
+      LightRooms-sheet_4: 1654759600996955220
+      LightRooms-sheet_5: 3178882360983106143
+      LightRooms-sheet_6: -7375862743630670853
+      LightRooms-sheet_7: -8272379069151033055
+      LightRooms-sheet_8: 6654968837021434919
+      LightRooms-sheet_9: -3120945075748466394
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

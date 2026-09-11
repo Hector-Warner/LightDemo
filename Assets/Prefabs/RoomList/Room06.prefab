@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6038628971977276754}
   - component: {fileID: 2338815754917019547}
   - component: {fileID: 2715807180021983540}
-  - component: {fileID: 1947932434909756343}
+  - component: {fileID: 6703045280605267889}
   m_Layer: 6
   m_Name: Room06
   m_TagString: Untagged
@@ -142,12 +142,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 9.018077, y: -1.3156691}
-      - {x: 8.959434, y: -8.907501}
-      - {x: 1.2527056, y: -8.96106}
-      - {x: 1.2428656, y: -10.044124}
-      - {x: 10, y: -10}
-      - {x: 10.065525, y: -1.2923975}
+    - - {x: 9.1, y: -1.1}
+      - {x: 9.1, y: -9.1}
+      - {x: 1.1, y: -9.1}
+      - {x: 1.1, y: -9.9}
+      - {x: 9.9, y: -9.9}
+      - {x: 9.9, y: -1.1}
   m_UseDelaunayMesh: 1
 --- !u!60 &6038628971977276754
 PolygonCollider2D:
@@ -195,12 +195,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.2756443, y: 10.05542}
-      - {x: 1.2820797, y: 8.865414}
-      - {x: 8.89661, y: 8.936546}
-      - {x: 8.939384, y: 1.3374825}
-      - {x: 10.103607, y: 1.3656006}
-      - {x: 10, y: 10}
+    - - {x: 1.1, y: 9.9}
+      - {x: 1.1, y: 9.1}
+      - {x: 9.1, y: 9.1}
+      - {x: 9.1, y: 1.1}
+      - {x: 9.9, y: 1.1}
+      - {x: 9.9, y: 9.9}
   m_UseDelaunayMesh: 1
 --- !u!60 &2338815754917019547
 PolygonCollider2D:
@@ -248,12 +248,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -1.3580542, y: 10.002061}
-      - {x: -10.176408, y: 10.08189}
-      - {x: -10.016463, y: 1.2059727}
-      - {x: -8.959147, y: 1.2247896}
-      - {x: -8.891758, y: 8.940575}
-      - {x: -1.3777666, y: 8.9445915}
+    - - {x: -1.1, y: 9.9}
+      - {x: -9.9, y: 9.9}
+      - {x: -9.9, y: 1.1}
+      - {x: -9.1, y: 1.1}
+      - {x: -9.1, y: 9.1}
+      - {x: -1.1, y: 9.1}
   m_UseDelaunayMesh: 1
 --- !u!60 &2715807180021983540
 PolygonCollider2D:
@@ -301,14 +301,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -8.890313, y: -1.2389212}
-      - {x: -8.907193, y: -9.005133}
-      - {x: -1.229084, y: -8.912244}
-      - {x: -1.2039466, y: -10.009401}
-      - {x: -10.063343, y: -10.000258}
-      - {x: -10.109545, y: -1.2367916}
+    - - {x: -9.1, y: -1.1}
+      - {x: -9.1, y: -9.1}
+      - {x: -1.1, y: -9.1}
+      - {x: -1.1, y: -9.9}
+      - {x: -9.9, y: -9.9}
+      - {x: -9.9, y: -1.1}
   m_UseDelaunayMesh: 1
---- !u!61 &1947932434909756343
+--- !u!61 &6703045280605267889
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -342,7 +342,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 1
   m_CompositeOrder: 0
-  m_Offset: {x: 0.071707726, y: -0.07170963}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -352,5 +352,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 10.199812, y: 2.0728188}
+  m_Size: {x: 9.9, y: 1.9}
   m_EdgeRadius: 0

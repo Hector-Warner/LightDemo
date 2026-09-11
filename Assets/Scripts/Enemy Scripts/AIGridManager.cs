@@ -27,7 +27,7 @@ public class AIGridManager : MonoBehaviour
 
     public void ResetGridNodes(Transform requestingEnemy = null)
     {
-        for (int i = 0; i < 100; i++) // Update boundaries to match grid size
+        for (int i = 0; i < 100; i++)
         {
             for (int j = 0; j < 100; j++)
             {

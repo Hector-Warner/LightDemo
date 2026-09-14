@@ -14,7 +14,7 @@
 
 # Future Plans
 - Adding Items
-- Custom artwork
+- Custom artwork and animations
 - Treasure!
 - Objectives
 - More dynamic enemies

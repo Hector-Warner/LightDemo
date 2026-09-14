@@ -8,8 +8,9 @@
 # Controls
 - WASD - Movement
 - Left Click - Melee attack
-- Right Click - Projectile Attack
+- Right Click - Projectile Attack (Higher damage but uses light)
 - Q - Absorb light when near a torch
+- Space - Dash (Uses Light)
 
 # Future Plans
 - Adding Items
@@ -19,3 +20,9 @@
 - More dynamic enemies
 
 # Video Gameplay
+
+
+https://github.com/user-attachments/assets/f3aa8adc-c115-4f82-9de2-f17b725a3fb4
+
+
+

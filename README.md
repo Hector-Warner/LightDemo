@@ -11,4 +11,11 @@
 - Right Click - Projectile Attack
 - Q - Absorb light when near a torch
 
+# Future Plans
+- Adding Items
+- Custom artwork
+- Treasure!
+- Objectives
+- More dynamic enemies
+
 # Video Gameplay

@@ -1,52 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6127038374047519661
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1770197052883246497}
-  - component: {fileID: 786716323660424127}
-  m_Layer: 0
-  m_Name: FlowerSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1770197052883246497
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6127038374047519661}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.04, y: -0.05, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4808842618483140586}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &786716323660424127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6127038374047519661}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ad9716a04ab3e84fae82473c7cab5dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  SpawnAmount: 3
-  monsterType: 0
-  MonsterPrefab: {fileID: 7445014718506041803, guid: a8e2ada559c342040939c44fd8609afa, type: 3}
 --- !u!1 &8642610426137730963
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,4 +563,66 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4393429599101320314, guid: e85462655ce2e1545902237b6fabd4b5, type: 3}
   m_PrefabInstance: {fileID: 5811034993259838719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6472387919398913212
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4808842618483140586}
+    m_Modifications:
+    - target: {fileID: 924669990563960593, guid: 05b86f5c2f960d347afdd114e22ba91b, type: 3}
+      propertyPath: m_Name
+      value: FlowerSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702754522706073885, guid: 05b86f5c2f960d347afdd114e22ba91b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702754522706073885, guid: 05b86f5c2f960d347afdd114e22ba91b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702754522706073885, guid: 05b86f5c2f960d347afdd114e22ba91b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702754522706073885, guid: 05b86f5c2f960d347afdd114e22ba91b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702754522706073885, guid: 05b86f5c2f960d347afdd114e22ba91b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702754522706073885, guid: 05b86f5c2f960d347afdd114e22ba91b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702754522706073885, guid: 05b86f5c2f960d347afdd114e22ba91b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702754522706073885, guid: 05b86f5c2f960d347afdd114e22ba91b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702754522706073885, guid: 05b86f5c2f960d347afdd114e22ba91b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702754522706073885, guid: 05b86f5c2f960d347afdd114e22ba91b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 05b86f5c2f960d347afdd114e22ba91b, type: 3}
+--- !u!4 &1770197052883246497 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4702754522706073885, guid: 05b86f5c2f960d347afdd114e22ba91b, type: 3}
+  m_PrefabInstance: {fileID: 6472387919398913212}
   m_PrefabAsset: {fileID: 0}

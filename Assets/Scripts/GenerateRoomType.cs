@@ -24,7 +24,7 @@ public class GenerateRoomType : MonoBehaviour
     public GameObject GenerateRoom(int x, int y)
     {
         int roomNo = Random.Range(0, RoomPrefab.Length);
-        GameObject newRoom = Instantiate(RoomPrefab[roomNo], new Vector3(x * 20, y * 20, 0), transform.rotation);
+        GameObject newRoom = Instantiate(RoomPrefab[roomNo], new Vector3(x * 20 + 10, y * 20 + 10, 0), transform.rotation);
         newRoom.transform.SetParent(transform);
         return newRoom;
     }

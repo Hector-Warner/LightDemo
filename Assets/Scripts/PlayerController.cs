@@ -137,14 +137,17 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Torch"))
         {
-            Light2D torchLight = collision.gameObject.GetComponentInChildren<Light2D>();
-            if (torchLight.pointLightOuterRadius > 0 && healthScript.health < 100)
+            if (Input.GetKey(KeyCode.Q))
             {
-                torchLight.pointLightOuterRadius -= Time.deltaTime;
-                healthScript.playerLight.pointLightOuterRadius += Time.deltaTime;
-                gameObject.GetComponent<CircleCollider2D>().radius = healthScript.playerLight.pointLightOuterRadius;
-                healthScript.health += Time.deltaTime * 100 / 10;
-                collision.gameObject.GetComponent<CircleCollider2D>().radius = torchLight.pointLightOuterRadius;
+                Light2D torchLight = collision.gameObject.GetComponentInChildren<Light2D>();
+                if (torchLight.pointLightOuterRadius > 0 && healthScript.health < 100)
+                {
+                    torchLight.pointLightOuterRadius -= Time.deltaTime;
+                    healthScript.playerLight.pointLightOuterRadius += Time.deltaTime;
+                    gameObject.GetComponent<CircleCollider2D>().radius = healthScript.playerLight.pointLightOuterRadius;
+                    healthScript.health += Time.deltaTime * 100 / 10;
+                    collision.gameObject.GetComponent<CircleCollider2D>().radius = torchLight.pointLightOuterRadius;
+                }
             }
         }
     }

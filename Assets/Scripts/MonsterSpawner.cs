@@ -36,7 +36,6 @@ public class MonsterSpawner : MonoBehaviour
         {
             if (calculateDistance(Player.transform.position,transform.position) < 30)
             {
-                Debug.Log("Spawning");
                 SpawnMonsters();
             }
         }
@@ -45,15 +44,24 @@ public class MonsterSpawner : MonoBehaviour
     public float calculateDistance(Vector2 startCoord, Vector2 endCoord)
     {
         float distance = Mathf.Abs(startCoord.x - endCoord.x) + Mathf.Abs(startCoord.y - endCoord.y);
-        Debug.Log(distance);
         return distance;
     }
 
     void SpawnMonsters()
     {
-        for (int i = 0; i < SpawnAmount; i++)
+        if (monsterType == MonsterType.FlowerCreature)
         {
-            Instantiate(MonsterPrefab, transform.position, transform.rotation);
+            SpawnAmount = Random.Range(2, 6);
+        } else if (monsterType == MonsterType.Giant)
+        {
+            SpawnAmount = Random.Range(1, 4);
+        }
+        if (Random.Range(1, 3) == 1)
+        {
+            for (int i = 0; i < SpawnAmount; i++)
+            {
+                Instantiate(MonsterPrefab, transform.position, transform.rotation);
+            }
         }
         spawned = true;
     }

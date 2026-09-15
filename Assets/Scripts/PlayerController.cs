@@ -113,13 +113,23 @@ public class PlayerController : MonoBehaviour
     IEnumerator Dash()
     {
         dashing = true;
-        
-        while (dashTimer < 0.25f)
+        int playerLayer = LayerMask.NameToLayer("Player");
+        int enemyLayer = LayerMask.NameToLayer("Enemy");
+
+        Physics2D.IgnoreLayerCollision(playerLayer, enemyLayer, true);
+
+        float dashSpeed = speed * 3f * movementAdjustment;
+        float dashDuration = 0.25f;
+        float timer = 0f;
+
+        while (timer < dashDuration)
         {
-            myRigidBody.linearVelocity = new Vector2(currentDir.x * speed * 3 * movementAdjustment, currentDir.y * speed * 3 * movementAdjustment);
-            dashTimer += Time.deltaTime;
-            yield return null;
+            myRigidBody.linearVelocity = currentDir.normalized * dashSpeed;
+            timer += Time.fixedDeltaTime;
+            yield return new WaitForFixedUpdate();
         }
+        Physics2D.IgnoreLayerCollision(playerLayer, enemyLayer, false);
+        myRigidBody.linearVelocity = Vector2.zero;
         dashing = false;
     }
 

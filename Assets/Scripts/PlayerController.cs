@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     public Vector2 Direction;
     private Animator myAnimator;
 
+    ArrayList collidingObjects = new ArrayList();
+
 
     private Camera myCam;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -147,16 +149,45 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Torch"))
         {
-            if (Input.GetKey(KeyCode.Q))
+            if (Input.GetKey(KeyCode.Q) && collidingObjects.Count > 0)
             {
-                Light2D torchLight = collision.gameObject.GetComponentInChildren<Light2D>();
+                GameObject targetTorch = (GameObject) collidingObjects[0];
+                Light2D torchLight = targetTorch.GetComponentInChildren<Light2D>();
                 if (torchLight.pointLightOuterRadius > 0 && healthScript.health < 100)
                 {
                     torchLight.pointLightOuterRadius -= Time.deltaTime;
                     healthScript.playerLight.pointLightOuterRadius += Time.deltaTime;
                     gameObject.GetComponent<CircleCollider2D>().radius = healthScript.playerLight.pointLightOuterRadius;
                     healthScript.health += Time.deltaTime * 100 / 10;
-                    collision.gameObject.GetComponent<CircleCollider2D>().radius = torchLight.pointLightOuterRadius;
+                    targetTorch.GetComponent<CircleCollider2D>().radius = torchLight.pointLightOuterRadius;
+                }
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Torch"))
+        {
+            if (collision != null)
+            {
+                if (!collidingObjects.Contains(collision.gameObject))
+                {
+                    collidingObjects.Add(collision.gameObject);
+                }
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Torch"))
+        {
+            if (collision != null)
+            {
+                if (collidingObjects.Contains(collision.gameObject))
+                {
+                    collidingObjects.Remove(collision.gameObject);
                 }
             }
         }

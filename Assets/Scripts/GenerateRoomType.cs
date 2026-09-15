@@ -1,14 +1,17 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class GenerateRoomType : MonoBehaviour
 {
     public GameObject[] RoomPrefab;
+    public int numOfRoomsX;
+    public int numOfRoomsY;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        for (int x = 0; x < 5; x++)
+        for (int x = 0; x < numOfRoomsX; x++)
         {
-            for (int y = 0; y < 5; y++)
+            for (int y = 0; y < numOfRoomsY; y++)
             {
                 GenerateRoom(x, y);
             }
@@ -26,6 +29,12 @@ public class GenerateRoomType : MonoBehaviour
         int roomNo = Random.Range(0, RoomPrefab.Length);
         GameObject newRoom = Instantiate(RoomPrefab[roomNo], new Vector3(x * 20 + 10, y * 20 + 10, 0), transform.rotation);
         newRoom.transform.SetParent(transform);
+
+        if (x == Mathf.FloorToInt(numOfRoomsX/2) && y ==  Mathf.FloorToInt(numOfRoomsY/2))
+        {
+            Debug.Log("Attempting to Spawn");
+            newRoom.GetComponentInChildren<PlayerSpawnpoint>().SpawnPlayer();
+        }
         return newRoom;
     }
 }

@@ -13,6 +13,7 @@ public class AIScript : MonoBehaviour
     public Material PureWhiteMat;
     public Material DefaultMat;
     public List<Node> FinalPath = new List<Node>();
+    public GameObject coin;
     private Animator myAnimator;
     
 
@@ -55,6 +56,8 @@ public class AIScript : MonoBehaviour
     {
         if (GetComponent<EnemyHealth>().Health <= 0)
         {
+            GameObject newCoin = Instantiate(coin, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+            newCoin.GetComponent<CoinScript>().coinAmount = Random.Range(5, 10);
             Destroy(gameObject);
         }
         if (timer >= 0.5f)

@@ -7,6 +7,7 @@ public class HealthScript : MonoBehaviour
     public Light2D playerLight;
     public float health = 100f;
     bool isReducing = false;
+    public int money;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

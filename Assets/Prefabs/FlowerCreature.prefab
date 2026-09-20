@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -3017870990206462073}
   - component: {fileID: 2419532168653322437}
   - component: {fileID: 3542629720089215063}
+  - component: {fileID: 5430474672417120787}
   m_Layer: 7
   m_Name: FlowerCreature
   m_TagString: Untagged
@@ -115,6 +116,7 @@ MonoBehaviour:
   enemyAttack: {fileID: 0}
   PureWhiteMat: {fileID: 2100000, guid: cf0e668c71e847d4c877a735dc0bf2f6, type: 2}
   DefaultMat: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  coin: {fileID: 5064233625680082504, guid: 08d86d01bbe94c84389db3289d29ab7b, type: 3}
   health: 80
   moveSpeed: 10
 --- !u!50 &7258747719021078370
@@ -235,3 +237,40 @@ MonoBehaviour:
   Health: 80
   PureWhiteMat: {fileID: 2100000, guid: cf0e668c71e847d4c877a735dc0bf2f6, type: 2}
   DefaultMat: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+--- !u!70 &5430474672417120787
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7445014718506041803}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.06, y: -0.022487283}
+  m_Size: {x: 2.31, y: 1.57}
+  m_Direction: 1

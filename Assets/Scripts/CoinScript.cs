@@ -5,10 +5,12 @@ public class CoinScript : MonoBehaviour
     // Value attributed to this coin
     public int coinAmount;
     GameObject player;
+    UpdateUI UIScript;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         PlayerController playerScript = FindFirstObjectByType<PlayerController>();
+        UIScript = FindFirstObjectByType<UpdateUI>();
         if (playerScript != null)
         {
             player = playerScript.gameObject;
@@ -31,6 +33,7 @@ public class CoinScript : MonoBehaviour
         if (collision.gameObject == player)
         {
             player.GetComponent<HealthScript>().money += coinAmount;
+            UIScript.UpdateCoinCount();
             Destroy(gameObject);
         }
     }

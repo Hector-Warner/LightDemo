@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5542639148474827343}
   - component: {fileID: 3714661879549717414}
   - component: {fileID: 5662485978596704216}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Torch
   m_TagString: Torch
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5302149669850096711}
   - component: {fileID: 332390445278200087}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spot Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -60,7 +60,7 @@ public class MonsterSpawner : MonoBehaviour
         {
             for (int i = 0; i < SpawnAmount; i++)
             {
-                Instantiate(MonsterPrefab, transform.position, transform.rotation);
+                //Instantiate(MonsterPrefab, transform.position, transform.rotation);
             }
         }
         spawned = true;

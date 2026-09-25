@@ -18,15 +18,16 @@ public class PlayerController : MonoBehaviour
     public PlayerMeleeAttack meleeAttack;
     Vector2 currentDir;
     bool dashing = false;
-    float dashTimer = 0f;
     public GameObject bullet;
     public GridController gridController;
     public SpriteRenderer spriteRenderer;
     public bool facingRight;
     public Vector2 Direction;
+    public LayerMask torchLayer;
     private Animator myAnimator;
 
-    ArrayList collidingObjects = new ArrayList();
+
+    Collider2D[] collidingObject = new Collider2D[10];
 
 
     private Camera myCam;
@@ -48,7 +49,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             StartCoroutine(healthScript.reduceHealth(-5));
-            dashTimer = 0;
             StartCoroutine(Dash());
         }
         if (Input.GetKeyDown(KeyCode.Mouse1))
@@ -58,6 +58,23 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             myAnimator.SetTrigger("PlayerMeleeAtk");
+        }
+
+        Debug.Log(collidingObject != null);
+        // Torch system
+
+        if (Input.GetKey(KeyCode.Q) && collidingObject != null)
+        {
+            GameObject targetTorch = (GameObject)collidingObject[0].gameObject;
+            Light2D torchLight = targetTorch.GetComponentInChildren<Light2D>();
+            if (torchLight.pointLightOuterRadius > 0 && healthScript.health < 100)
+            {
+                torchLight.pointLightOuterRadius -= Time.deltaTime;
+                healthScript.playerLight.pointLightOuterRadius += Time.deltaTime;
+                gameObject.GetComponent<CircleCollider2D>().radius = healthScript.playerLight.pointLightOuterRadius;
+                healthScript.health += Time.deltaTime * 100 / 10;
+                targetTorch.GetComponent<CircleCollider2D>().radius = torchLight.pointLightOuterRadius;
+            }
         }
 
     }
@@ -144,52 +161,8 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(healthScript.reduceHealth(-10));
     }
 
-    
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Torch"))
-        {
-            if (Input.GetKey(KeyCode.Q) && collidingObjects.Count > 0)
-            {
-                GameObject targetTorch = (GameObject) collidingObjects[0];
-                Light2D torchLight = targetTorch.GetComponentInChildren<Light2D>();
-                if (torchLight.pointLightOuterRadius > 0 && healthScript.health < 100)
-                {
-                    torchLight.pointLightOuterRadius -= Time.deltaTime;
-                    healthScript.playerLight.pointLightOuterRadius += Time.deltaTime;
-                    gameObject.GetComponent<CircleCollider2D>().radius = healthScript.playerLight.pointLightOuterRadius;
-                    healthScript.health += Time.deltaTime * 100 / 10;
-                    targetTorch.GetComponent<CircleCollider2D>().radius = torchLight.pointLightOuterRadius;
-                }
-            }
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Torch"))
-        {
-            if (collision != null)
-            {
-                if (!collidingObjects.Contains(collision.gameObject))
-                {
-                    collidingObjects.Add(collision.gameObject);
-                }
-            }
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Torch"))
-        {
-            if (collision != null)
-            {
-                if (collidingObjects.Contains(collision.gameObject))
-                {
-                    collidingObjects.Remove(collision.gameObject);
-                }
-            }
-        }
+        collidingObject = Physics2D.OverlapCircleAll(transform.position, healthScript.playerLight.pointLightOuterRadius, torchLayer);
     }
 }

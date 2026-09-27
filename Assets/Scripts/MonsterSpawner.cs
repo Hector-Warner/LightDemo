@@ -51,16 +51,16 @@ public class MonsterSpawner : MonoBehaviour
     {
         if (monsterType == MonsterType.FlowerCreature)
         {
-            SpawnAmount = Random.Range(2, 6);
+            SpawnAmount = Random.Range(1, 3);
         } else if (monsterType == MonsterType.Giant)
         {
-            SpawnAmount = Random.Range(1, 4);
+            SpawnAmount = Random.Range(1, 2);
         }
         if (Random.Range(1, 3) == 1)
         {
             for (int i = 0; i < SpawnAmount; i++)
             {
-                //Instantiate(MonsterPrefab, transform.position, transform.rotation);
+                Instantiate(MonsterPrefab, transform.position, transform.rotation);
             }
         }
         spawned = true;

@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     public GameObject bullet;
     public GridController gridController;
     public SpriteRenderer spriteRenderer;
-    public bool facingRight;
+    public bool facingRight = true;
     public Vector2 Direction;
     public LayerMask torchLayer;
     private Animator myAnimator;

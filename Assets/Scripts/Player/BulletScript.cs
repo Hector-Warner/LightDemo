@@ -3,6 +3,7 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {
     float timer = 0;
+    public LayerMask ObstacleLayer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -27,6 +28,13 @@ public class BulletScript : MonoBehaviour
         {
             collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(40);
             Destroy(gameObject);
+        }
+        if (collision.gameObject.layer == 6)
+        {
+            Destroy(gameObject);
+        }
+        {
+            
         }
     }
 }

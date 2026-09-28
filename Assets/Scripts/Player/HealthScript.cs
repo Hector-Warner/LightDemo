@@ -7,7 +7,9 @@ public class HealthScript : MonoBehaviour
     public Light2D playerLight;
     public float health = 100f;
     public int money;
-    
+    public Material PureRedMat;
+    public Material DefaultMat;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,6 +24,9 @@ public class HealthScript : MonoBehaviour
 
     public IEnumerator reduceHealth(float healthChange)
     {
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+
+        sr.material = PureRedMat;
         float newHealth = health + healthChange;
         while (health > newHealth)
         {
@@ -33,5 +38,6 @@ public class HealthScript : MonoBehaviour
             }
             yield return null;
         }
+        sr.material = DefaultMat;
     }
 }

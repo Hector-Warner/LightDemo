@@ -9,6 +9,7 @@ public class HealthScript : MonoBehaviour
     public int money;
     public Material PureRedMat;
     public Material DefaultMat;
+    public Coroutine healthCoroutine;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,5 +40,6 @@ public class HealthScript : MonoBehaviour
             yield return null;
         }
         sr.material = DefaultMat;
+        healthCoroutine = null;
     }
 }

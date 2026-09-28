@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     public Vector2 Direction;
     public LayerMask torchLayer;
     private Animator myAnimator;
+    
 
 
     Collider2D[] collidingObject = new Collider2D[10];
@@ -158,7 +159,16 @@ public class PlayerController : MonoBehaviour
         GameObject newBullet = Instantiate(bullet,transform.position, Quaternion.identity);
         float bulletSpeed = 30f;
         newBullet.GetComponent<Rigidbody2D>().linearVelocity = Direction * bulletSpeed;
-        StartCoroutine(healthScript.reduceHealth(-10));
+        TakeDamage(-10);
+    }
+
+    void TakeDamage(float healthChange)
+    {
+        if (healthScript.healthCoroutine != null)
+        {
+            StopCoroutine(healthScript.healthCoroutine);
+        }
+        healthScript.healthCoroutine = StartCoroutine(healthScript.reduceHealth(healthChange));
     }
 
     private void OnTriggerStay2D(Collider2D collision)

@@ -22,7 +22,5 @@
 # Video Gameplay
 
 
-https://github.com/user-attachments/assets/f3aa8adc-c115-4f82-9de2-f17b725a3fb4
-
-
+https://github.com/user-attachments/assets/189ac12a-5e38-4052-972d-968270f7359f
 

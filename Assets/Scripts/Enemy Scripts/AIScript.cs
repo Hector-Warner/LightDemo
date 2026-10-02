@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class AIScript : MonoBehaviour
 {
@@ -14,7 +15,9 @@ public class AIScript : MonoBehaviour
     public Material DefaultMat;
     public List<Node> FinalPath = new List<Node>();
     public GameObject coin;
+    public SpriteRenderer spriteRenderer;
     private Animator myAnimator;
+    private bool facingRight = false;
     
 
     [Header("To Customise Enemy")]
@@ -48,6 +51,7 @@ public class AIScript : MonoBehaviour
         }
         rb = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
     }
 
@@ -81,6 +85,17 @@ public class AIScript : MonoBehaviour
                     //myAnimator.SetBool("IsWalking", false);
                 }
             }
+        }
+
+        if (player.transform.position.x > transform.position.x && facingRight)
+        {
+            facingRight = !facingRight;
+            spriteRenderer.flipX = !facingRight;
+        }
+        else if (player.transform.position.x < transform.position.x && !facingRight)
+        {
+            facingRight = !facingRight;
+            spriteRenderer.flipX = !facingRight;
         }
     }
 

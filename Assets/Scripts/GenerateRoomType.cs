@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.Rendering;
 
 public class GenerateRoomType : MonoBehaviour
@@ -6,9 +7,18 @@ public class GenerateRoomType : MonoBehaviour
     public GameObject[] RoomPrefab;
     public int numOfRoomsX;
     public int numOfRoomsY;
+    public int Level;
+    public GameObject GameManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        Level = 1;
+        newLevel(Level);
+    }
+
+    void newLevel(int levelNo)
+    {
+        GameManager.GetComponent<SpawningCostCalculator>().LevelCost = levelNo * 5;
         for (int x = 0; x < numOfRoomsX; x++)
         {
             for (int y = 0; y < numOfRoomsY; y++)
@@ -16,12 +26,6 @@ public class GenerateRoomType : MonoBehaviour
                 GenerateRoom(x, y);
             }
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public GameObject GenerateRoom(int x, int y)

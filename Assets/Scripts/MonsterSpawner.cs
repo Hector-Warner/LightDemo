@@ -1,9 +1,12 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MonsterSpawner : MonoBehaviour
 {
     GameObject Player;
     bool spawned = false;
+    GameObject GameManager;
+    float Timer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     
     enum MonsterType
@@ -22,9 +25,14 @@ public class MonsterSpawner : MonoBehaviour
     void Start()
     {
         PlayerController playerScript = FindFirstObjectByType<PlayerController>();
+        SpawningCostCalculator spawnCostCalcScript = FindFirstObjectByType<SpawningCostCalculator>();
         if (playerScript != null)
         {
             Player = playerScript.gameObject;
+        }
+        if (spawnCostCalcScript != null)
+        {
+            GameManager = spawnCostCalcScript.gameObject;
         }
         Debug.Log("Loaded");
     }
@@ -32,12 +40,18 @@ public class MonsterSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Timer += Time.deltaTime;
         if (!spawned)
         {
             if (calculateDistance(Player.transform.position,transform.position) < 30)
             {
                 SpawnMonsters();
             }
+        }
+        if (Timer >= 15)
+        {
+            spawned = false;
+            Timer = 0;
         }
     }
 
@@ -58,11 +72,15 @@ public class MonsterSpawner : MonoBehaviour
         }
         if (Random.Range(1, 3) == 1)
         {
-            for (int i = 0; i < SpawnAmount; i++)
+            if (GameManager.GetComponent<SpawningCostCalculator>().currentExpendedCost < GameManager.GetComponent<SpawningCostCalculator>().LevelCost)
             {
-                Instantiate(MonsterPrefab, transform.position, transform.rotation);
+                for (int i = 0; i < SpawnAmount; i++)
+                {
+                    Instantiate(MonsterPrefab, transform.position, transform.rotation);
+                }
+                GameManager.GetComponent<SpawningCostCalculator>().currentExpendedCost += 1;
+                spawned = true;
             }
         }
-        spawned = true;
     }
 }

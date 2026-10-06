@@ -18,6 +18,16 @@ public class SpawningCostCalculator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (currentExpendedCost >= LevelCost)
+        {
+            GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+            if (enemies.Length == 0)
+            {
+                RoomGenerator.GetComponent<GenerateRoomType>().Level += 1;
+                RoomGenerator.GetComponent<GenerateRoomType>().newLevel(RoomGenerator.GetComponent<GenerateRoomType>().Level);
+                currentExpendedCost = 0;
+            }
+        }
     }
 }

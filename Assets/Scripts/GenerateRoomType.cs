@@ -9,21 +9,25 @@ public class GenerateRoomType : MonoBehaviour
     public int numOfRoomsY;
     public int Level;
     public GameObject GameManager;
+    GameObject[] RoomList;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        RoomList = new GameObject[1];
         Level = 1;
         newLevel(Level);
     }
 
-    void newLevel(int levelNo)
+    public void newLevel(int levelNo)
     {
+        DestroyPreviousLayout();
+        RoomList = new GameObject[numOfRoomsX * numOfRoomsY];
         GameManager.GetComponent<SpawningCostCalculator>().LevelCost = levelNo * 5;
         for (int x = 0; x < numOfRoomsX; x++)
         {
             for (int y = 0; y < numOfRoomsY; y++)
             {
-                GenerateRoom(x, y);
+                RoomList[x + y*5] = GenerateRoom(x, y);
             }
         }
     }
@@ -40,5 +44,18 @@ public class GenerateRoomType : MonoBehaviour
             newRoom.GetComponentInChildren<PlayerSpawnpoint>().SpawnPlayer();
         }
         return newRoom;
+    }
+
+    public void DestroyPreviousLayout()
+    {
+        Debug.Log(RoomList.Length);
+        foreach (GameObject room in RoomList)
+        {
+            Debug.Log(room);
+            if (room != null)
+            {
+                Destroy(room);
+            }
+        }
     }
 }

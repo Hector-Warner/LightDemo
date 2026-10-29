@@ -80,6 +80,9 @@ public class MonsterSpawner : MonoBehaviour
                 }
                 GameManager.GetComponent<SpawningCostCalculator>().currentExpendedCost += 1;
                 spawned = true;
+            } else
+            {
+                //if (CompareTag)
             }
         }
     }

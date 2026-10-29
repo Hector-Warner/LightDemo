@@ -10,16 +10,26 @@ public class GenerateRoomType : MonoBehaviour
     public int Level;
     public GameObject GameManager;
     GameObject[] RoomList;
+    GameObject Player;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        PlayerController playerScript = FindFirstObjectByType<PlayerController>();
+        if (playerScript != null)
+        {
+            Player = playerScript.gameObject;
+        }
         RoomList = new GameObject[1];
-        Level = 1;
+        Level = 2;
         newLevel(Level);
     }
 
     public void newLevel(int levelNo)
     {
+        if (levelNo != 1)
+        {
+            Player.transform.position = new Vector2(-25, 15);
+        }
         DestroyPreviousLayout();
         RoomList = new GameObject[numOfRoomsX * numOfRoomsY];
         GameManager.GetComponent<SpawningCostCalculator>().LevelCost = levelNo * 5;
@@ -41,7 +51,10 @@ public class GenerateRoomType : MonoBehaviour
         if (x == Mathf.FloorToInt(numOfRoomsX/2) && y ==  Mathf.FloorToInt(numOfRoomsY/2))
         {
             Debug.Log("Attempting to Spawn");
-            newRoom.GetComponentInChildren<PlayerSpawnpoint>().SpawnPlayer();
+            if (Level == 1)
+            {
+                newRoom.GetComponentInChildren<PlayerSpawnpoint>().SpawnPlayer();
+            }
         }
         return newRoom;
     }
